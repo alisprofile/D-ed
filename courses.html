@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    
+
+    <!-- Testimonials -->
+
+    <!--Font G -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"/>
+    
+  
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" />
+
+    
+
+    <title>Depth</title>
+
+    <style>
+        /* Hover For Pages start */
+.dropdown-menu {
+    background-color: black !important;
+    border: 1px solid white !important;
+}
+
+.dropdown-item {
+    color: #fff !important;
+}
+
+.dropdown-item:hover {
+    color: #9b8de3 !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: rgba(199, 237, 241, 0.1);
+}
+
+/* Start including of popular course carosile */
+.container {
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 1em;
+}
+
+.cards {
+    display: flex;
+    padding: 25px 0px;
+    list-style: none;
+    overflow-x: scroll;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+}
+
+.card:not(:last-child) {
+    margin-right: 10px;
+}
+
+.card:hover {
+    color: var(--white);
+    background: var(--red);
+}
+
+.card .card-title {
+    font-size: 20px;
+}
+
+.card .card-content {
+    margin: 20px 0;
+    max-width: 85%;
+}
+
+.card .card-link-wrapper {
+    margin-top: auto;
+}
+
+.card .card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: var(--red);
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.card:hover .card-link {
+    background: var(--darkred);
+}
+
+.cards::-webkit-scrollbar {
+    height: 12px;
+}
+
+.cards::-webkit-scrollbar-thumb,
+.cards::-webkit-scrollbar-track {
+    border-radius: 92px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+    background: var(--darkred);
+}
+
+.cards::-webkit-scrollbar-track {
+    background: var(--thumb);
+}
+
+@media (min-width: 500px) {
+    .card {
+        flex-basis: calc(50% - 10px);
+    }
+
+    .card:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 700px) {
+    .card {
+        flex-basis: calc(calc(100% / 3) - 20px);
+    }
+
+    .card:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .card {
+        flex-basis: calc(25% - 30px);
+    }
+
+    .card:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+/* Most popular course */
+
+.team-boxed {
+  color:#313437;
+  background-color:#eef4f7;
+}
+
+.team-boxed p {
+  color:#7d8285;
+}
+
+.team-boxed h2 {
+  font-weight:bold;
+  margin-bottom:40px;
+  padding-top:40px;
+  color:inherit;
+}
+
+@media (max-width:767px) {
+  .team-boxed h2 {
+    margin-bottom:25px;
+    padding-top:25px;
+    font-size:24px;
+  }
+}
+
+.team-boxed .intro {
+  font-size:16px;
+  max-width:500px;
+  margin:0 auto;
+}
+
+.team-boxed .intro p {
+  margin-bottom:0;
+}
+
+.team-boxed .people {
+  padding:50px 0;
+}
+
+.team-boxed .item {
+  text-align:center;
+}
+
+.team-boxed .item .box {
+  text-align:center;
+  padding:30px;
+  background-color:#fff;
+  margin-bottom:30px;
+}
+
+.team-boxed .item .name {
+  font-weight:bold;
+  margin-top:28px;
+  margin-bottom:8px;
+  color:inherit;
+}
+
+.team-boxed .item .title {
+  text-transform:uppercase;
+  font-weight:bold;
+  color:#d0d0d0;
+  letter-spacing:2px;
+  font-size:13px;
+}
+
+.team-boxed .item .description {
+  font-size:15px;
+  margin-top:15px;
+  margin-bottom:20px;
+}
+
+.team-boxed .item img {
+  max-width:160px;
+}
+
+.team-boxed .social {
+  font-size:18px;
+  color:#a2a8ae;
+}
+
+.team-boxed .social a {
+  color:inherit;
+  margin:0 10px;
+  display:inline-block;
+  opacity:0.7;
+}
+
+.team-boxed .social a:hover {
+  opacity:1;
+}
+
+
+/* For screens smaller than 768px */
+@media only screen and (max-width: 400px) {
+  .cards-inner-flexbox {
+    justify-content: center;
+  }
+  
+  .cards-inner-flexboxitems {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* For screens between 768px and 992px */
+@media only screen and (min-width: 400px) and (max-width: 700px) {
+  .cards-inner-flexboxitems {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+}
+
+/* For screens larger than 992px */
+@media only screen and (min-width: 400px) {
+  .cards-inner-flexbox {
+    justify-content: space-between;
+  }
+  
+  .cards-inner-flexboxitems {
+    width: 22%;
+  }
+}
+
+/* Adjustments for all screens */
+.chords-cards {
+  background-color: #131921;
+  /* padding-top: 60px 0; */
+}
+
+.cards-inner-flexbox {
+  /* margin-top: 150px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card-box {
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all 0.5s;
+  margin-bottom: 30px;
+}
+
+.card-box-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #131921;
+  border-radius: 20px;
+  transition: all 0.4s;
+}
+
+.card-box-2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card-box:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+}
+
+.card-box-2 h3 {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 36px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.card-box-2 p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.read-more-cta {
+  margin-bottom: 15px;
+  font-family: "Alkatra", cursive;
+  text-decoration: none;
+  font-style: normal;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  color: var(--white);
+  padding: 6px 20px;
+  border: 2px solid white;
+  transition: all 0.4s;
+}
+
+.read-more-cta:hover {
+  border: 2px solid blue;
+  
+}
+
+    </style>
+</head>
+
+<body style="background-color: #131921;">
+<!-- Start Navigation -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-0 border-bottom border-dark fixed-top d-print-none" style="background-color: #131921;">
+  <div class="container-fluid">
+    <!-- Navbar brand -->
+    <a href="index.html" class="navbar-brand"><img src="images/sitelogo/depth1.png" alt="Depth" height="60px"></a><!-- Distributive Educational paltform transformative Hybrid education-->
+
+    <!-- Navbar toggle button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Courses</a>
+        </li>
+        
+        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#studentLoginModelCenter">Sign In</a></li>
+        <li class="nav-item"><button type="button" class="btn btn-light ms-3"><a data-bs-toggle="modal" data-bs-target="#studentRegModelCenter">Get Started</a></button></li>';
+       
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="d-flex align-items-center justify-content-center text-center text-light" style="height: 360px; background-color: #131921;">
+<div class="row">
+<div class="col-12">
+<div class=" p-4 p-sm-5 rounded-5">
+<h1>Featured Courses!</h1>
+<div class="text-light"><p>The Folowing Courses Displaying are the Top selling Courses this Month</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<section class="chords-cards">
+
+            <div class="container">
+                <div class="cards-inner-flexbox">
+                <!-- Start of card -->
+                    <div class="cards-inner-flexboxitems" id="majors">
+                        <div class="card-box">
+                        <img src="images/courseimg/advancehtml.jpg" alt="Course Image" class="card-img-top" style="object-fit: cover; height: 300px;  border-radius: 25px; padding: 5px; margin-top: -40px;">
+                            <div class="card-box-2">
+                                <h3>Advanced Html</h3>
+                                <p><small><del>&#8377;10,000</del></small></p>
+                                <p><b>&#8377;2,000</b></p>
+                                <a class="read-more-cta" href="advancedhtml.html">Enroll > </a>
+                            </div>
+                        </div>
+                    </div>';
+                    <div class="cards-inner-flexboxitems" id="majors">
+                        <div class="card-box">
+                        <img src="images/courseimg/fox-gd0e3736cc_1920.jpg" alt="Course Image" class="card-img-top" style="object-fit: cover; height: 300px;  border-radius: 25px; padding: 5px; margin-top: -40px;">
+                            <div class="card-box-2">
+                                <h3>Graphics</h3>
+                                <p><small><del>&#8377;10,000</del></small></p>
+                                <p><b>&#8377;2,000</b></p>
+                                <a class="read-more-cta" href="graphics.html">Enroll > </a>
+                            </div>
+                        </div>
+                    </div>';
+                    <div class="cards-inner-flexboxitems" id="majors">
+                        <div class="card-box">
+                        <img src="images/courseimg/meta.jpeg" alt="Course Image" class="card-img-top" style="object-fit: cover; height: 300px;  border-radius: 25px; padding: 5px; margin-top: -40px;">
+                            <div class="card-box-2">
+                                <h3>Metaverse</h3>
+                                <p><small><del>&#8377;10,000</del></small></p>
+                                <p><b>&#8377;2,000</b></p>
+                                <a class="read-more-cta" href="metaverse.html">Enroll > </a>
+                            </div>
+                        </div>
+                    </div>';
+                    <div class="cards-inner-flexboxitems" id="majors">
+                        <div class="card-box">
+                        <img src="images/courseimg/peter-maselkowski-N135eczYTAs-unsplash.jpg" alt="Course Image" class="card-img-top" style="object-fit: cover; height: 300px;  border-radius: 25px; padding: 5px; margin-top: -40px;">
+                            <div class="card-box-2">
+                                <h3>Advanced Coding</h3>
+                                <p><small><del>&#8377;10,000</del></small></p>
+                                <p><b>&#8377;2,000</b></p>
+                                <a class="read-more-cta" href="advancedcoding.html">Enroll > </a>
+                            </div>
+                        </div>
+                    </div>';
+               <!-- End of card -->
+                       
+
+                    </div>
+                </div>
+        </section>
+
+
+
+
+
+
+
+<!-- End course page banner -->
+<div class="d-flex align-items-center justify-content-center text-center text-light" style="height: 360px; background-color: #131921;">
+<div class="row">
+<div class="col-12">
+<div class=" p-4 p-sm-5 rounded-5">
+<h1>Popular Courses!</h1>
+<div class="text-light"><p>Enroll to receive Instruction and Access</p></div>
+
+</div>
+</div>
+</div>
+</div>
+<section style="background-color: #131921;">
+<!-- start Most popular courses -->
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-top: -120px;">
+
+      <!-- Start of card -->
+        <div class="col" style="margin-bottom: 50px;">
+                <div class="card h-100 bg-dark text-white" style="border: 2px solid white; padding: 10px; border-radius: 25px;">
+                    <img src="images/courseimg/advancehtml.jpg" alt="Course Image" class="card-img-top" style="object-fit: cover; height: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Advanced Html</h5>
+                        <p class="card-text">Learn Advance Excel</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <p class="card-text m-0">Price :<small><del>&#8377;10,000</del></small>
+                        <span><b>&#8377;2,000</b></span>
+                    </p>
+                    <div class="text-right">
+                        <a href="advancedhtml.html" class="btn btn-light text- fontblack-weight-bolder">Enroll</a>
+                    </div>
+                  </div>
+              </div>
+          </div>
+            
+        <!-- End of card -->
+      <!-- Start of card -->
+        <div class="col" style="margin-bottom: 50px;">
+                <div class="card h-100 bg-dark text-white" style="border: 2px solid white; padding: 10px; border-radius: 25px;">
+                    <img src="images/courseimg/fox-gd0e3736cc_1920.jpg" alt="Course Image" class="card-img-top" style="object-fit: cover; height: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Graphics</h5>
+                        <p class="card-text">Learn to create stunning Graphids and doodle arts</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <p class="card-text m-0">Price :<small><del>&#8377;10,000</del></small>
+                        <span><b>&#8377;2,000</b></span>
+                    </p>
+                    <div class="text-right">
+                        <a href="graphics.html" class="btn btn-light text- fontblack-weight-bolder">Enroll</a>
+                    </div>
+                  </div>
+              </div>
+          </div>
+            
+        <!-- End of card -->
+      <!-- Start of card -->
+        <div class="col" style="margin-bottom: 50px;">
+                <div class="card h-100 bg-dark text-white" style="border: 2px solid white; padding: 10px; border-radius: 25px;">
+                    <img src="images/courseimg/meta.jpeg" alt="Course Image" class="card-img-top" style="object-fit: cover; height: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Metaverse</h5>
+                        <p class="card-text">Learn to create and use metaverse</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <p class="card-text m-0">Price :<small><del>&#8377;10,000</del></small>
+                        <span><b>&#8377;2,000</b></span>
+                    </p>
+                    <div class="text-right">
+                        <a href="metaverse.html" class="btn btn-light text- fontblack-weight-bolder">Enroll</a>
+                    </div>
+                  </div>
+              </div>
+          </div>
+            
+        <!-- End of card -->
+      <!-- Start of card -->
+        <div class="col" style="margin-bottom: 50px;">
+                <div class="card h-100 bg-dark text-white" style="border: 2px solid white; padding: 10px; border-radius: 25px;">
+                    <img src="images/courseimg/peter-maselkowski-N135eczYTAs-unsplash.jpg" alt="Course Image" class="card-img-top" style="object-fit: cover; height: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Advanced Coding</h5>
+                        <p class="card-text">'Learn Advance Coding</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <p class="card-text m-0">Price :<small><del>&#8377;10,000</del></small>
+                        <span><b>&#8377;2,000</b></span>
+                    </p>
+                    <div class="text-right">
+                        <a href="advancedcoding.html" class="btn btn-light text- fontblack-weight-bolder">Enroll</a>
+                    </div>
+                  </div>
+              </div>
+          </div>
+            
+        <!-- End of card -->
+
+
+    </div>
+    </div>
+    </section>
+<!-- End Most Popular Course card Deck -->
+<div class="d-flex align-items-center justify-content-center text-center text-light" style="height: 360px; background-color: #131921;">
+    <div class="row">
+        <div class="col-12">
+            <div class=" p-4 p-sm-5 rounded-5">
+                <h1>Become An Instructor!</h1>
+                    <div class="text-light"><p>Sign up to receive Instruction and Access</p></div>
+                <a href="#" class=""><button type="button" class="btn btn-info">Sign Up!</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+ 
+ <!-- start of footer about section -->
+ 
+ <footer class="footer-07" style="background-color: #131921;">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-12 text-center" style="margin-top: 80px;">
+<!-- <h2 class="footer-heading"><a href="index.php" class="logo" style="text-decoration: none;">DEPTH.com</a></h2> -->
+<p class="text-light">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>|| designed by ali || All rights reserved | DEPTH
+</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="tands.php" style="text-decoration: none;">Privacy</a></li>
+            <li class="list-inline-item"><a href="" style="text-decoration: none;">Terms</a></li>
+            <li class="list-inline-item"><a href="users/support.php" style="text-decoration: none;">Support</a></li>
+        </ul>
+</div>
+</div>
+
+</div>
+</footer>
+
+
+      
+<!-- End of footer about section -->
+
+<!-- Start of sign up registration -->
+<div class="modal fade" id="studentRegModelCenter" tabindex="-1" aria-labelledby="studentRegModelCenterLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header text-dark">
+        <h1 class="modal-title fs-5" id="studentRegModelCenterLabel">Get Started</h1>
+        <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    
+    <!-- start student registration -->
+    <div class="modal-body">  
+        <form id="stuRegForm">
+            <div class="form-group">
+                <i class="fas fa-user"></i>
+                <label for="stuname" class="pl-2 font-weight-bold">Name</label>
+                <small id="statusMsg1"></small>
+                <input type="stuname" class="form-control" placeholder="Name" name="stuname" id="stuname">
+            </div>
+
+            <div class="form-group">
+                <i class="fas fa-envelope"></i>
+                <label for="stuemail" class="pl-2 font-weight-bold">Email</label>
+                <small id="statusMsg2"></small>
+                <input type="email" class="form-control" placeholder="example@gmail.com" name="stuemail" id="stuemail">
+                
+            </div>
+
+            <div class="form-group">
+                <i class="fas fa-key"></i>
+                <label for="stupass" class="pl-2 font-weight-bold">New Password</label>
+                <small id="statusMsg3"></small>
+                <input type="password" name="password" autocomplete="on" class="form-control" id="stupass" placeholder="Password">
+            </div>
+            <p class="text-center text-muted mt-5 mb-0">Have already an account?
+                <a href="#" data-bs-toggle="modal" data-bs-target="#studentLoginModelCenter"><u>Login</u></a>
+            </p>
+        </form>
+    </div>
+    <!-- End of student registration! -->
+
+
+    <div class="modal-footer text-dark">
+        <span id="successMsg"></span>
+        <button type="button" class="btn btn-light text-dark" onclick="addStu()" id="signup">Sign Up</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- End of sign up registration -->
+
+<!-- Start of Login -->
+<div class="modal fade" id="studentLoginModelCenter" tabindex="-1" aria-labelledby="studentLoginModelCenterLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-dark">
+                <h1 class="modal-title fs-5" id="studentLoginModelCenterLabel" style="font-size: 25px;">Login</h1>
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- start student Login -->
+            <div class="modal-body text-white" >
+                <form id="studentLoginForm" >
+                    <div class="form-group"><i class="fas fa-envelope"></i>
+                        <label for="stuLoginemail" class="pl-2 font-weight-bold">Email</label>
+                        <input type="email" class="form-control" placeholder="E-mail" name="stuLoginemail" id="stuLogemail">
+                    </div>
+
+                    <div class="form-group"><i class="fas fa-key"></i>
+                        <label for="stuLoginpass" class="pl-2 font-weight-bold" >Password</label>
+                        <input type="password" name="password" autocomplete="on" class="form-control" id="stuLoginpass" placeholder="Password">
+                    </div>
+                    <p class="text-center text-muted mt-5 mb-0">Didn't have an account?
+                <a href="#" data-bs-toggle="modal" data-bs-target="#studentRegModelCenter"><u>Sign up</u></a>
+            </p>
+                </form>
+            </div>
+            <!-- End of student Login -->
+
+            <div class="modal-footer text-dark" >
+                <small id="statusLogMsg"></small>
+                <button type="button" class="btn btn-light text-dark" id="stuLoginBtn" onclick="checkStuLogin()">Login</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End of Login -->
+
+
+
+<!-- Start of Admin Login  -->
+<div class="modal fade" id="adminLoginModelCenter" tabindex="-1" aria-labelledby="studentLoginModelCenterLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <div class="modal-header bg-dark text-white">
+        <h1 class="modal-title fs-5" id="studentLoginModelCenterLabel">Admin Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    
+    <!-- start admin Login -->
+    <div class="modal-body">  
+        <form id="adminLoginForm">
+            <div class="form-group"><i class="fas fa-envelope"></i>
+                <label for="adminLogemail" class="pl-2 font-weight-bold">Email</label>
+                <input type="email" class="form-control" placeholder="E-mail" name="adminLogemail" id="adminLogemail">
+            </div>
+
+            <div class="form-group"><i class="fas fa-key"></i>
+                <label for="adminLogpass" class="pl-2 font-weight-bold">Password</label>
+                <input type="password" name="adminLogpass" autocomplete="on" class="form-control" id="adminLogpass" placeholder="Password">
+            </div>
+        </form>
+    </div>
+    <!-- End of admin Login -->
+    <div class="modal-footer bg-dark text-white">
+    <small id="statusAdminLogMsg"></small>
+        <button type="button" class="btn btn-light text-dark" id="adminLoginBtn" onclick="checkAdmin()">Login</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+    </div>
+    </div>
+</div>
+</div>
+<!-- End of Admin Login -->
+
+<!-- Jquery, Bootstrap and Javascript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/all.min.js"></script>
+
+<!-- student Ajax call Javascript -->
+<script type="text/javascript" src="js/ajaxrequest.js"></script>
+
+<script type="text/javascript" src="js/adminajaxrequest.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</body>
+</html>
